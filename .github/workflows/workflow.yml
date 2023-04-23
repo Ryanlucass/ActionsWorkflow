@@ -16,7 +16,7 @@ jobs:
       - uses: actions/checkout@v3
       
       - name: exectuando docker
-        run: docker run docker/whalseay cowsay 
+        run: docker run docker/whalesay cowsay 
         
       - name: Run a multi-line scripts 
         run: 
