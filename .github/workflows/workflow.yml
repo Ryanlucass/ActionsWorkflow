@@ -1,0 +1,25 @@
+name: CI 
+
+on: 
+  push:
+    branches: ["main", "staging"]
+  pull_request:
+    branches: ["main", "staging"]
+  
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps: 
+      - uses: actions/checkout@v3
+      
+      - name: exectuando docker
+        run: docker run docker/whalseay cowsay 
+        
+      - name: Run a multi-line scripts 
+        run: 
+          echo Add other actions to build,
+          echo test, and deploy your project.
+    
